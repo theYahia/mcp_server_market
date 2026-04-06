@@ -2,60 +2,172 @@
     "mcpServers": {
         "sqlite": {
             "command": "uvx",
-            "args": [
-                "mcp-server-sqlite",
-                "--db-path",
-                "/path/to/test.db"
-            ]
+            "args": ["mcp-server-sqlite", "--db-path", "/path/to/test.db"]
         },
         "fetch": {
             "command": "uvx",
-            "args": [
-                "mcp-server-fetch"
-            ]
+            "args": ["mcp-server-fetch"]
         },
         "filesystem": {
             "command": "npx",
-            "args": [
-                "-y",
-                "@modelcontextprotocol/server-filesystem",
-                "/path/to/allowed/files"
-            ]
+            "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"]
         },
         "git": {
             "command": "uvx",
-            "args": [
-                "mcp-server-git",
-                "--repository",
-                "path/to/git/repo"
-            ]
+            "args": ["mcp-server-git", "--repository", "path/to/git/repo"]
         },
         "github": {
             "command": "npx",
-            "args": [
-                "-y",
-                "@modelcontextprotocol/server-github"
-            ],
-            "env": {
-                "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
-            }
+            "args": ["-y", "@modelcontextprotocol/server-github"],
+            "env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"}
         },
         "postgres": {
             "command": "npx",
-            "args": [
-                "-y",
-                "@modelcontextprotocol/server-postgres",
-                "postgresql://localhost/mydb"
-            ]
+            "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/mydb"]
         },
         "Turkiye-Legal-MCP": {
             "command": "uvx",
-            "args": [
-                "--from",
-                "git+https://github.com/saidsurucu/yargi-mcp",
-                "yargi-mcp"
-            ],
+            "args": ["--from", "git+https://github.com/saidsurucu/yargi-mcp", "yargi-mcp"],
             "env": {"key": "yargimcp"}
+        },
+        "cdek": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/cdek-mcp"],
+            "env": {
+                "CDEK_CLIENT_ID": "<YOUR_CLIENT_ID>",
+                "CDEK_CLIENT_SECRET": "<YOUR_CLIENT_SECRET>",
+                "CDEK_SANDBOX": "true"
+            }
+        },
+        "tkassa": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/tkassa-mcp"],
+            "env": {
+                "TKASSA_TERMINAL_KEY": "<YOUR_TERMINAL_KEY>",
+                "TKASSA_PASSWORD": "<YOUR_PASSWORD>"
+            }
+        },
+        "travelpayouts": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/travelpayouts-mcp"],
+            "env": {"TRAVELPAYOUTS_TOKEN": "<YOUR_TOKEN>"}
+        },
+        "dadata": {
+            "command": "npx",
+            "args": ["-y", "@metarebalance/dadata-mcp"],
+            "env": {
+                "DADATA_API_KEY": "<YOUR_API_KEY>",
+                "DADATA_SECRET_KEY": "<YOUR_SECRET_KEY>"
+            }
+        },
+        "cbr": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/cbr-mcp"]
+        },
+        "yookassa": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/yookassa-mcp"],
+            "env": {
+                "YOOKASSA_SHOP_ID": "<YOUR_SHOP_ID>",
+                "YOOKASSA_SECRET_KEY": "<YOUR_SECRET_KEY>"
+            }
+        },
+        "cloudpayments": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/cloudpayments-mcp"],
+            "env": {
+                "CLOUDPAYMENTS_PUBLIC_ID": "<YOUR_PUBLIC_ID>",
+                "CLOUDPAYMENTS_API_PASSWORD": "<YOUR_PASSWORD>"
+            }
+        },
+        "moysklad": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/moysklad-mcp"],
+            "env": {"MOYSKLAD_TOKEN": "<YOUR_TOKEN>"}
+        },
+        "wildberries": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/wildberries-mcp"],
+            "env": {"WB_API_KEY": "<YOUR_API_KEY>"}
+        },
+        "voximplant": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/voximplant-mcp"],
+            "env": {
+                "VOXIMPLANT_ACCOUNT_ID": "<YOUR_ACCOUNT_ID>",
+                "VOXIMPLANT_API_KEY": "<YOUR_API_KEY>"
+            }
+        },
+        "1c-rest": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/1c-rest-mcp"],
+            "env": {
+                "ONEC_BASE_URL": "<YOUR_1C_URL>",
+                "ONEC_USERNAME": "<YOUR_USERNAME>",
+                "ONEC_PASSWORD": "<YOUR_PASSWORD>"
+            }
+        },
+        "sms-ru": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/sms-ru-mcp"],
+            "env": {"SMSRU_API_ID": "<YOUR_API_ID>"}
+        },
+        "vk": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/vk-mcp"],
+            "env": {"VK_ACCESS_TOKEN": "<YOUR_TOKEN>"}
+        },
+        "yandex-metrika": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/yandex-metrika-mcp"],
+            "env": {
+                "YANDEX_METRIKA_TOKEN": "<YOUR_TOKEN>",
+                "YANDEX_METRIKA_COUNTER_ID": "<YOUR_COUNTER_ID>"
+            }
+        },
+        "yandex-direct": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/yandex-direct-mcp"],
+            "env": {"YANDEX_DIRECT_TOKEN": "<YOUR_TOKEN>"}
+        },
+        "bitrix24": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/bitrix24-mcp"],
+            "env": {"BITRIX24_WEBHOOK_URL": "<YOUR_WEBHOOK_URL>"}
+        },
+        "kaspi": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/kaspi-mcp"],
+            "env": {"KASPI_API_KEY": "<YOUR_API_KEY>"}
+        },
+        "gigachat": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/gigachat-mcp"],
+            "env": {
+                "GIGACHAT_CLIENT_ID": "<YOUR_CLIENT_ID>",
+                "GIGACHAT_CLIENT_SECRET": "<YOUR_CLIENT_SECRET>"
+            }
+        },
+        "jivosite": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/jivosite-mcp"],
+            "env": {"JIVOSITE_API_KEY": "<YOUR_API_KEY>"}
+        },
+        "mindbox": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/mindbox-mcp"],
+            "env": {
+                "MINDBOX_ENDPOINT_ID": "<YOUR_ENDPOINT_ID>",
+                "MINDBOX_SECRET_KEY": "<YOUR_SECRET_KEY>"
+            }
+        },
+        "sendpulse": {
+            "command": "npx",
+            "args": ["-y", "@theyahia/sendpulse-mcp"],
+            "env": {
+                "SENDPULSE_CLIENT_ID": "<YOUR_CLIENT_ID>",
+                "SENDPULSE_CLIENT_SECRET": "<YOUR_CLIENT_SECRET>"
+            }
         }
     }
 }
